@@ -116,6 +116,7 @@ function changeBookStatus(book, status, card){
     card.classList.add("read_card");
   }
   status.textContent = `${book.status}`;
+  updateLibraryCount(myLibrary);
 }
 
 function removeBook(value, card){
