@@ -67,7 +67,7 @@ function createBookCard(book){
   const removeBtn = document.createElement("button");
   const index = book.index;
   
-  title.textContent = `Title: ${book.title}`;
+  title.textContent = `${book.title}`;
   author.textContent = `Author : ${book.author}`; 
   pages.textContent = `Pages: ${book.pages}`;
 
