@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <link rel="icon" href="./images/odin_icon.svg" type="image/x-icon">
+  <title>Project: Library</title>
+</head>
+<body>
+  <header class="header">
+    <h1>My Library</h1>
+    <div class="library_count">
+      <p class="total_books">Total : 0</p>
+      <p class="read_books">Read: 0</p>
+      <p class="not_read_books">Not read: 0</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <button class="btn" id="add_btn">+Add a book</button>
+    <h2 class="empty_library">Your library is empty :(</h2>
+    <form action="post" class="new_book_form hide" id="new_book_form">
+      <fieldset class="form_container">
+        <legend class="form_legend">Add a new book!!</legend>
+        <div>
+          <label for="title" class="sr_only">Title</label>
+          <input type="text" name="title" id="title" placeholder="Title"
+          required oninvalid="setCustomValidity('Enter the name of the book!!')"
+          oninput="setCustomValidity('')">
+        </div>
+        <div>
+          <label for="author" class="sr_only">Author</label>
+          <input type="text" name="author" id="author" placeholder="Author"
+          required oninvalid="setCustomValidity('Enter the name of the author!!')"
+          oninput="setCustomValidity('')">
+        </div>
+        <div>
+          <label for="pages" class="sr_only">Pages</label>
+          <input type="number" name="pages" id="pages" placeholder="Number of pages" min="1"
+          required oninvalid="setCustomValidity('How many pages is the book?')"
+          oninput="setCustomValidity('')">
+        </div>
+        <div>
+          <input type="checkbox" name="status" id="status">
+          <label for="status">Read</label>
+        </div>
+        <button class="btn">Submit</button>
+      </fieldset>
+    </form>
+    <div class="library" id="library"></div>
+  </main>
+
+  <footer class="footer">Bousalah Nadir. The odin Project 2023</footer>
+</body>
+</html>
