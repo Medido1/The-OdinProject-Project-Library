@@ -59,7 +59,6 @@ function getBookInfo(){
 }
 
 function createBookCard(book){
-  
   const card = document.createElement("div");
   const title = document.createElement("span");
   const author = document.createElement("span");
